@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Heart Disease and National Parks Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> <!-- Font Awesome -->
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map { width: 100%; height: 100%; }
+        .info, .legend { background: white; padding: 8px; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+        .info h4 { margin: 0 0 5px; color: #777; }
+        .legend {
+            z-index: 1000;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            padding: 6px 8px;
+            font: 14px Arial, Helvetica, sans-serif;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .legend i {
+            width: 18px;
+            height: 16px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        #title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="title">Heart Disease and National Parks Map</div>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.0/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+
+<script>
+    // Initialize the map centered on the US
+    var map = L.map('map').setView([37.8, -96], 5);
+
+    // Add a grayscale base layer
+    var baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Heart disease choropleth layer
+    var heartDiseaseLayer = L.geoJson.ajax("map-2.geojson", {
+        style: function(feature) {
+            var grades = [114.9, 153.2, 191.5, 229.8, 268.1, 306.4];
+            var colors = chroma.scale('OrRd').colors(grades.length);
+            var getColor = function(d) {
+                for (var i = 0; i < grades.length - 1; i++) {
+                    if (d >= grades[i] && d < grades[i + 1]) return colors[i];
+                }
+                return colors[grades.length - 1];
+            };
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'grey',
+                dashArray: '3',
+                fillOpacity: 0.7,
+                fillColor: getColor(feature.properties.density)
+            };
+        },
+        onEachFeature: function(feature, layer) {
+            layer.on({
+                mouseover: function(e) {
+                    var layer = e.target;
+                    layer.setStyle({
+                        weight: 5,
+                        color: '#666',
+                        dashArray: '',
+                        fillOpacity: 0.7
+                    });
+                    layer.bringToFront();
+                },
+                mouseout: function(e) {
+                    heartDiseaseLayer.resetStyle(e.target);
+                },
+                click: function(e) {
+                    map.fitBounds(e.target.getBounds());
+                }
+            });
+        }
+    }).addTo(map);
+
+    // National Parks layer with tree icon
+    var nationalParks = L.geoJson.ajax("NPS.geojson", {
+        pointToLayer: function(feature, latlng) {
+            var treeIcon = L.divIcon({
+                className: 'custom-icon',
+                html: '<i class="fas fa-tree" style="color: green; font-size: 16px;"></i>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            return L.marker(latlng, { icon: treeIcon }).bindPopup('<strong>' + feature.properties.name + '</strong>');
+        }
+    }).addTo(map);
+
+    // Layer control
+    L.control.layers(null, {
+        "Heart Disease Choropleth": heartDiseaseLayer,
+        "National Parks": nationalParks
+    }).addTo(map);
+
+    // Add scale bar
+    L.control.scale().addTo(map);
+
+    // Create and add a legend
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function(map) {
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = [114.9, 153.2, 191.5, 229.8, 268.1, 306.4],
+            labels = [],
+            colors = chroma.scale('OrRd').colors(grades.length);
+
+        // Add legend labels and colored boxes
+        for (var i = 0; i < grades.length; i++) {
+            labels.push(
+                '<i style="background:' + colors[i] + '"></i> ' +
+                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+')
+            );
+        }
+
+        div.innerHTML = labels.join('<br>');
+        return div;
+    };
+
+    legend.addTo(map);
+
+</script>
+</body>
+</html>

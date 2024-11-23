@@ -1,0 +1,446 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-68.2615, 44.3386]
+        },
+        "properties": {
+          "name": "Acadia National Park",
+          "state": "Maine"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-170.5841, -14.2711]
+        },
+        "properties": {
+          "name": "American Samoa National Park",
+          "state": "American Samoa"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-109.6, 38.7]
+        },
+        "properties": {
+          "name": "Arches National Park",
+          "state": "Utah"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-101.9, 43.75]
+        },
+        "properties": {
+          "name": "Badlands National Park",
+          "state": "South Dakota"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-103.25, 29.25]
+        },
+        "properties": {
+          "name": "Big Bend National Park",
+          "state": "Texas"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-89.6, 37.7]
+        },
+        "properties": {
+          "name": "Biscayne National Park",
+          "state": "Florida"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-113.5, 37.1]
+        },
+        "properties": {
+          "name": "Bryce Canyon National Park",
+          "state": "Utah"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.2, 45.6]
+        },
+        "properties": {
+          "name": "Crater Lake National Park",
+          "state": "Oregon"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-105.5, 40.3]
+        },
+        "properties": {
+          "name": "Rocky Mountain National Park",
+          "state": "Colorado"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-118.5, 37.0]
+        },
+        "properties": {
+          "name": "Sequoia National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-119.5, 37.5]
+        },
+        "properties": {
+          "name": "Kings Canyon National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-119.7, 36.5]
+        },
+        "properties": {
+          "name": "Channel Islands National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.1, 38.5]
+        },
+        "properties": {
+          "name": "Delaware Water Gap National Recreation Area",
+          "state": "New Jersey/Pennsylvania"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.2, 37.9]
+        },
+        "properties": {
+          "name": "Golden Gate National Recreation Area",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-89.3, 35.2]
+        },
+        "properties": {
+          "name": "Great Smoky Mountains National Park",
+          "state": "North Carolina/Tennessee"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-108.5, 35.2]
+        },
+        "properties": {
+          "name": "Mesa Verde National Park",
+          "state": "Colorado"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-107.5, 37.0]
+        },
+        "properties": {
+          "name": "Petrified Forest National Park",
+          "state": "Arizona"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.0, 47.0]
+        },
+        "properties": {
+          "name": "Mount Rainier National Park",
+          "state": "Washington"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-89.0, 42.0]
+        },
+        "properties": {
+          "name": "Shenandoah National Park",
+          "state": "Virginia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-123.7, 48.8]
+        },
+        "properties": {
+          "name": "Olympic National Park",
+          "state": "Washington"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-93.7, 39.4]
+        },
+        "properties": {
+          "name": "Gateway Arch National Park",
+          "state": "Missouri"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-108.5, 38.7]
+        },
+        "properties": {
+          "name": "Canyonlands National Park",
+          "state": "Utah"
+        }
+
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-120.5, 37.3]
+        },
+        "properties": {
+          "name": "Yosemite National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-108.5, 31.8]
+        },
+        "properties": {
+          "name": "Carlsbad Caverns National Park",
+          "state": "New Mexico"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-120.5, 36.5]
+        },
+        "properties": {
+          "name": "Pinnacles National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-106.2, 29.0]
+        },
+        "properties": {
+          "name": "White Sands National Park",
+          "state": "New Mexico"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-116.2, 33.9]
+        },
+        "properties": {
+          "name": "Joshua Tree National Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-82.9, 27.9]
+        },
+        "properties": {
+          "name": "Everglades National Park",
+          "state": "Florida"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-85.9, 34.9]
+        },
+        "properties": {
+          "name": "Chattanooga National Military Park",
+          "state": "Tennessee/Georgia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-90.0, 39.8]
+        },
+        "properties": {
+          "name": "Cumberland Gap National Historical Park",
+          "state": "Kentucky/Tennessee/Virginia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-113.0, 41.0]
+        },
+        "properties": {
+          "name": "Grand Teton National Park",
+          "state": "Wyoming"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-109.0, 38.3]
+        },
+        "properties": {
+          "name": "Glen Canyon National Recreation Area",
+          "state": "Arizona/Utah"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-97.0, 38.0]
+        },
+        "properties": {
+          "name": "Tallgrass Prairie National Preserve",
+          "state": "Kansas"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-97.2, 37.3]
+        },
+        "properties": {
+          "name": "Washita Battlefield National Historic Site",
+          "state": "Oklahoma"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-116.7, 33.9]
+        },
+        "properties": {
+          "name": "Anza-Borrego Desert State Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-120.6, 37.6]
+        },
+        "properties": {
+          "name": "Castle Rock State Park",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-115.2, 32.8]
+        },
+        "properties": {
+          "name": "Death Valley National Park",
+          "state": "California/Nevada"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.5, 37.8]
+        },
+        "properties": {
+          "name": "Point Reyes National Seashore",
+          "state": "California"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-120.3, 37.0]
+        },
+        "properties": {
+          "name": "Lake Mead National Recreation Area",
+          "state": "Nevada/Arizona"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-121.8, 37.9]
+        },
+        "properties": {
+          "name": "Pinnacles National Park",
+          "state": "California"
+        }
+      }
+    ]
+  }
